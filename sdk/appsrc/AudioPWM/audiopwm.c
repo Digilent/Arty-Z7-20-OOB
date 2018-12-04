@@ -94,7 +94,7 @@ u32 SinGenerator(u32 *pu32SinArray, u32 u32NrSamples,
 	for (i=0; i<u32NrSamples; i++)
 	{
 		t = (double)i/(double)u32SamplingFreq;
-		sample = (u32Amplitude * sin(2 * M_PI * u32SinFreq * t));
+		sample = ((double)u32Amplitude * sin(2 * M_PI * (double)u32SinFreq * t));
 		*(pu32SinArray + i) = (int)sample;
 	};
 	return i;

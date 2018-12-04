@@ -53,6 +53,7 @@
  * Ver   Who          Date        Changes
  * ----- ------------ ----------- --------------------------------------------
  * 1.00  Elod Gyorgy 2016-Dec-21 First release
+ * 1.01  Arthur Brown 2018-Dec-4 Clean up for Github Release (pre-recorded soundtrack not included in repo)
  *
  * </pre>
  *
@@ -98,7 +99,7 @@ int main() {
 
 	init_platform();
 
-	SET_VERBOSE_FLAG();
+	CLR_VERBOSE_FLAG();
 
 	//This might not be printed properly, if CmdInit below uses the same UART as stdout
 	VERBOSE("Initializing...");
@@ -141,7 +142,7 @@ endinit:
 		fInitSuccess = fInitSuccess; //Have to add an instruction for the label
 	}
 
-	VERBOSE("Arty Z7 -Z20 Rev. B Demo Image\r\n");
+	xil_printf("Starting Arty Z7-20 Rev. B Out-of-Box Demo\r\n");
 
 	USER_IO_BTN_EN(1);
 	USER_IO_SW_EN(1);
@@ -151,7 +152,12 @@ endinit:
 		btn = u8BTN_Val();
 		if (btn)
 		{
+			// Play C4 (261 Hz Sine Wave) over AUDIO OUT at sampling rate of 48KHz, arbitrary amplitude < 0x7FFF
+			// ArtVVB: higher amplitudes have some distortion present, unsure why
+			SinGenerator((u32*)AUDIO_MEM_ADDR, AUD_NR_SAMPLES, 261, 48000, 256);
+			xil_printf("Button press detected. Starting audio playback.\r\n");
 			AudioDmaPlayBack(&sAxiDma, AUD_NR_SAMPLES, AUDIO_MEM_ADDR);
+			xil_printf("Audio playback complete.");
 		}
 	}
 
