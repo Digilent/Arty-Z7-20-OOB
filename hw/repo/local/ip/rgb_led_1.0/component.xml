@@ -296,7 +296,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>0706c049</spirit:value>
+            <spirit:value>7be723ae</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -310,7 +310,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>faf95302</spirit:value>
+            <spirit:value>365a294f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -944,7 +944,7 @@
       <spirit:file>
         <spirit:name>xgui/rgb_led_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_5436e51d</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_365a294f</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1027,20 +1027,30 @@
         <xilinx:taxonomy>AXI_Peripheral</xilinx:taxonomy>
       </xilinx:taxonomies>
       <xilinx:displayName>rgb_led_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>21</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2016-07-26T11:21:04Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>23</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-08-18T08:51:45Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="natinst.com:user:rgb_led:1.0_ARCHIVE_LOCATION">D:/projects/pynq/pynq_revB_2/bist/repo/local/ip/rgb_led_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7327d59f_ARCHIVE_LOCATION">e:/DigiLent/Old/Arty-Z7-10-OOB-2018.2-1/vivado_proj/Arty-Z7-10-OOB.ipdefs/repo_0/local/ip/rgb_led_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7870875b_ARCHIVE_LOCATION">e:/DigiLent/Old/Arty-Z7-10-OOB-2018.2-1/vivado_proj/Arty-Z7-10-OOB.ipdefs/repo_0/local/ip/rgb_led_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46e028ac_ARCHIVE_LOCATION">e:/DigiLent/Old/Arty-Z7-10-OOB-2018.2-1/vivado_proj/Arty-Z7-10-OOB.ipdefs/repo_0/local/ip/rgb_led_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34717be_ARCHIVE_LOCATION">e:/DigiLent/Old/Arty-Z7-10-OOB-2018.2-1/vivado_proj/Arty-Z7-10-OOB.ipdefs/repo_0/local/ip/rgb_led_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d443ad2_ARCHIVE_LOCATION">e:/DigiLent/Old/Arty-Z7-10-OOB-2018.2-1/vivado_proj/Arty-Z7-10-OOB.ipdefs/repo_0/local/ip/rgb_led_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@567283a5_ARCHIVE_LOCATION">e:/DigiLent/Old/Arty-Z7-10-OOB-2018.2-1/vivado_proj/Arty-Z7-10-OOB.ipdefs/repo_0/local/ip/rgb_led_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76c4a457_ARCHIVE_LOCATION">e:/DigiLent/Old/Arty-Z7-10-OOB-2018.2-1/vivado_proj/Arty-Z7-10-OOB.ipdefs/repo_0/local/ip/rgb_led_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1560f983_ARCHIVE_LOCATION">e:/DigiLent/Old/Arty-Z7-10-OOB-2018.2-1/vivado_proj/Arty-Z7-10-OOB.ipdefs/repo_0/local/ip/rgb_led_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53efa78f_ARCHIVE_LOCATION">e:/DigiLent/Old/Arty-Z7-10-OOB-2018.2-1/vivado_proj/Arty-Z7-10-OOB.ipdefs/repo_0/local/ip/rgb_led_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f504829_ARCHIVE_LOCATION">e:/DigiLent/Old/Arty-Z7-10-OOB-2018.2-1/vivado_proj/Arty-Z7-10-OOB.ipdefs/repo_0/local/ip/rgb_led_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2015.4</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a8787400"/>
-      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ca22a6c3"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="be6f04c7"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="3cd3a3c9"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="c9b0da8b"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8f59109d"/>
+      <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="2de876a3"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="716f08f0"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="375cacb3"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="69c4bc2a"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="a5d07f53"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="6b6421b7"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
