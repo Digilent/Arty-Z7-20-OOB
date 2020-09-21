@@ -142,7 +142,7 @@ endinit:
 		fInitSuccess = fInitSuccess; //Have to add an instruction for the label
 	}
 
-	xil_printf("Starting Arty Z7-20 Rev. B Out-of-Box Demo\r\n");
+	xil_printf("Starting Arty Z7-10 Rev. B Out-of-Box Demo\r\n");
 
 	USER_IO_BTN_EN(1);
 	USER_IO_SW_EN(1);

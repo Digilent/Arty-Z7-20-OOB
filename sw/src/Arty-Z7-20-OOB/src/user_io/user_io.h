@@ -55,7 +55,7 @@ XStatus fnUserIOTest(u8* sw_value, u8* pb_value);
  * If the component is implemented in a smaller width, only the least
  * significant data is written.
  *
- * @param   BaseAddress is the base address of the USER_IOdevice.
+ * @param   BaseAddress is the base address of the RGBdevice.
  * @param   RegOffset is the register offset from the base to write to.
  * @param   Data is the data written to the register.
  *
@@ -63,11 +63,31 @@ XStatus fnUserIOTest(u8* sw_value, u8* pb_value);
  *
  * @note
  * C-style signature:
- * 	void USER_IO_mWriteReg(u32 BaseAddress, unsigned RegOffset, u32 Data)
+ * 	void RGB_mWriteReg(u32 BaseAddress, unsigned RegOffset, u32 Data)
  *
  */
 #define RGB_mWriteReg(RegOffset, Data) \
   	Xil_Out32((RGB_BASEADDR) + (RegOffset), (u32)(Data))
+
+/**************************** Type Definitions *****************************/
+/**
+ *
+ * Read a value to a RGB register. A 32 bit read is performed.
+ * If the component is implemented in a smaller width, only the least
+ * significant data is written.
+ *
+ * @param   BaseAddress is the base address of the RGBdevice.
+ * @param   RegOffset is the register offset from the base to read from.
+ *
+ * @return  None.
+ *
+ * @note
+ * C-style signature:
+ * 	u32 RGB_mReadReg(u32 BaseAddress, unsigned RegOffset)
+ *
+ */
+#define RGB_mReadReg(RegOffset) \
+  	Xil_In32((RGB_BASEADDR) + (RegOffset))
 
 /**************************** Type Definitions *****************************/
 /**

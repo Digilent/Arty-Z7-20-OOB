@@ -94,20 +94,61 @@ XStatus USER_IO_RGB_INIT()
 	RGB_mWriteReg(RGB_PWM_DUTY_OFFSET, 0x2);
 	RGB_mWriteReg(RGB_PWM_PERIOD_OFFSET, 0xF);
 	RGB_mWriteReg(RGB_AUTO_DELAY_OFFSET, 0XF);
+	RGB_mWriteReg(RGB_LED_SEL_OFFSET, 0x1); // initialize with LD4 active
 	sleep();
 	RGB_mWriteReg(RGB_EN_OFFSET, 0x0);
 	sleep();
+
 	return XST_SUCCESS;
 }
 
 void USER_IO_RGB_AUTOTEST()
 {
-	RGB_mWriteReg(RGB_EN_OFFSET, 0xF);
+	static u32 counter = 0;
+	u32 led_sel;
+	u32 en;
+
+//	RGB_mWriteReg(RGB_EN_OFFSET, 0x8);
+
+	led_sel = RGB_mReadReg(RGB_LED_SEL_OFFSET);
+	RGB_mWriteReg(RGB_LED_SEL_OFFSET, 0x0);
+	RGB_mWriteReg(RGB_EN_OFFSET, 0x8);
+
+	switch ((counter >> 4) % 4) {
+	case 0:
+		en = 0b100;
+		break;
+	case 1:
+		en = 0b010;
+		break;
+	case 2:
+		en = 0b001;
+		break;
+	case 3:
+		en = 0b111;
+		break;
+	}
+
+	if (counter == 0) {
+		led_sel ^= 0b11;
+	}
+
+	if (counter >= 63) {
+		counter = 0;
+		// toggle both LEDs
+	} else {
+		counter++;
+	}
+
+	RGB_mWriteReg(RGB_EN_OFFSET, 0x8 | en);
 	RGB_mWriteReg(RGB_PWM_DUTY_OFFSET, 0x2FF);
 	RGB_mWriteReg(RGB_PWM_PERIOD_OFFSET, 0xFFF);
 	RGB_mWriteReg(RGB_AUTO_DELAY_OFFSET, 0X3FFF);
+	RGB_mWriteReg(RGB_LED_SEL_OFFSET, led_sel);
+
 	sleep();
 	RGB_mWriteReg(RGB_EN_OFFSET, 0x0);
+
 }
 
 /******************************************************************************
